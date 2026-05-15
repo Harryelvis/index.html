@@ -31,14 +31,7 @@
       radial-gradient(ellipse at 80% 100%, rgba(201,168,76,0.05) 0%, transparent 60%);
   }
 
-  .container {
-    width: 100%;
-    max-width: 480px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
+  .container { width: 100%; max-width: 480px; display: flex; flex-direction: column; align-items: center; gap: 0; }
 
   .header { text-align: center; margin-bottom: 32px; animation: fadeDown 0.7s ease both; }
 
@@ -49,24 +42,13 @@
     color: var(--gold); font-weight: 900; box-shadow: 0 0 32px rgba(201,168,76,0.2);
   }
 
-  .name {
-    font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900;
-    color: var(--cream); letter-spacing: 0.04em; margin-bottom: 10px;
-  }
+  .name { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--cream); letter-spacing: 0.04em; margin-bottom: 10px; }
 
   .bio { font-size: 13.5px; font-weight: 300; color: #9a9490; line-height: 1.6; max-width: 300px; margin: 0 auto; }
 
-  .divider {
-    width: 100%; height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    margin: 28px 0 24px; opacity: 0.4;
-  }
+  .divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); margin: 28px 0 24px; opacity: 0.4; }
 
-  .section-title {
-    width: 100%; text-align: center; font-family: 'Playfair Display', serif;
-    font-size: 15px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase;
-    margin-bottom: 16px; position: relative; animation: fadeUp 0.6s ease both;
-  }
+  .section-title { width: 100%; text-align: center; font-family: 'Playfair Display', serif; font-size: 15px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; animation: fadeUp 0.6s ease both; }
 
   .links-group { width: 100%; display: flex; flex-direction: column; gap: 12px; margin-bottom: 8px; }
 
@@ -78,22 +60,12 @@
     transition: all 0.25s ease; position: relative; overflow: hidden; animation: fadeUp 0.6s ease both;
   }
 
-  .link-btn::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(201,168,76,0.08), transparent);
-    opacity: 0; transition: opacity 0.25s ease;
-  }
-
-  .link-btn:hover { border-color: rgba(201,168,76,0.6); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.15); }
+  .link-btn::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,168,76,0.08), transparent); opacity: 0; transition: opacity 0.25s ease; }
+  .link-btn:hover { border-color: rgba(201,168,76,0.6); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
   .link-btn:hover::before { opacity: 1; }
   .link-btn .emoji { margin-right: 8px; }
 
-  .soon-badge {
-    display: inline-block; font-size: 10px; letter-spacing: 0.12em; color: var(--gold);
-    background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
-    border-radius: 2px; padding: 2px 7px; margin-left: 10px; vertical-align: middle;
-    text-transform: uppercase; font-weight: 500;
-  }
+  .soon-badge { display: inline-block; font-size: 10px; letter-spacing: 0.12em; color: var(--gold); background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3); border-radius: 2px; padding: 2px 7px; margin-left: 10px; vertical-align: middle; text-transform: uppercase; font-weight: 500; }
 
   .expand-btn {
     display: block; width: 100%; padding: 16px 24px; background: var(--dark2);
@@ -103,62 +75,49 @@
     position: relative; overflow: hidden; animation: fadeUp 0.6s ease both;
   }
 
-  .expand-btn::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(201,168,76,0.08), transparent);
-    opacity: 0; transition: opacity 0.25s ease;
-  }
-
+  .expand-btn::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,168,76,0.08), transparent); opacity: 0; transition: opacity 0.25s ease; }
   .expand-btn:hover { border-color: rgba(201,168,76,0.6); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
   .expand-btn:hover::before { opacity: 1; }
-
-  .expand-btn .arrow {
-    display: inline-block; margin-left: 8px; transition: transform 0.3s ease;
-    font-size: 12px; color: var(--gold);
-  }
-
+  .expand-btn .arrow { display: inline-block; margin-left: 8px; transition: transform 0.3s ease; font-size: 12px; color: var(--gold); }
   .expand-btn.open .arrow { transform: rotate(180deg); }
 
-  .sub-links {
-    display: none; flex-direction: column; gap: 8px; margin-top: 8px;
-    padding-left: 12px; border-left: 2px solid rgba(201,168,76,0.25);
-  }
-
+  .sub-links { display: none; flex-direction: column; gap: 8px; margin-top: 8px; padding-left: 12px; border-left: 2px solid rgba(201,168,76,0.25); }
   .sub-links.visible { display: flex; }
 
-  .sub-link {
-    display: block; width: 100%; padding: 13px 20px; background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(201,168,76,0.12); border-radius: 3px; color: #b8b3aa;
-    text-decoration: none; font-size: 13px; font-weight: 400; letter-spacing: 0.06em;
-    text-align: center; transition: all 0.2s ease;
-  }
-
+  .sub-link { display: block; width: 100%; padding: 13px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(201,168,76,0.12); border-radius: 3px; color: #b8b3aa; text-decoration: none; font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-align: center; transition: all 0.2s ease; cursor: pointer; }
   .sub-link:hover { color: var(--cream); border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.05); }
 
-  .modal-overlay {
-    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75);
-    z-index: 100; align-items: center; justify-content: center; backdrop-filter: blur(4px);
+  .sub-link-highlight { font-size: 15px; font-weight: 700; color: var(--gold); border-color: rgba(201,168,76,0.4); padding: 16px 20px; }
+  .sub-link-highlight:hover { background: rgba(201,168,76,0.08); }
+
+  .expand-btn.shimmer {
+    background: linear-gradient(135deg, var(--dark2) 0%, var(--dark2) 100%);
+    border-color: rgba(201,168,76,0.5);
+    overflow: hidden;
   }
 
+  .expand-btn.shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
+    animation: shimmer 2.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
   .modal-overlay.active { display: flex; }
 
-  .modal {
-    background: var(--dark2); border: 1px solid rgba(201,168,76,0.3); border-radius: 6px;
-    padding: 40px 36px; text-align: center; max-width: 320px; width: 90%;
-    animation: popIn 0.3s ease both; box-shadow: 0 24px 60px rgba(0,0,0,0.6);
-  }
-
+  .modal { background: var(--dark2); border: 1px solid rgba(201,168,76,0.3); border-radius: 6px; padding: 40px 36px; text-align: center; max-width: 320px; width: 90%; animation: popIn 0.3s ease both; box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
   .modal-icon { font-size: 36px; margin-bottom: 16px; }
   .modal-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--cream); margin-bottom: 10px; }
   .modal-text { font-size: 13px; color: #888; line-height: 1.6; margin-bottom: 24px; }
-
-  .modal-close {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--dark);
-    border: none; padding: 11px 28px; border-radius: 3px; font-family: 'DM Sans', sans-serif;
-    font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
-    cursor: pointer; transition: opacity 0.2s;
-  }
-
+  .modal-close { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--dark); border: none; padding: 11px 28px; border-radius: 3px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s; }
   .modal-close:hover { opacity: 0.85; }
 
   @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -179,10 +138,23 @@
   <!-- MY OFFERS -->
   <div class="section-title">MY OFFERS ⬇️</div>
   <div class="links-group">
-    <button class="link-btn" onclick="openModal()">
-      💰 <span>Get Started Reselling</span>
-      <span class="soon-badge">Coming Soon</span>
+
+    <button class="expand-btn shimmer" id="resellingBtn" onclick="toggleReselling()">
+      💰 Get Started Reselling
+      <span class="arrow">▼</span>
     </button>
+    <div class="sub-links" id="resellingLinks">
+      <a class="sub-link sub-link-highlight" onclick="openModal()">
+        😈 1-1 HELP <span class="soon-badge">Coming Soon</span>
+      </a>
+      <a class="sub-link" onclick="openModal()">
+        📦 My Reselling Studio <span class="soon-badge">Coming Soon</span>
+      </a>
+      <a class="sub-link" href="https://www.vinted.co.uk/invite/s.storyclothing" target="_blank" rel="noopener">
+        👗 Sign Up For Vinted
+      </a>
+    </div>
+
     <button class="expand-btn" id="shopBtn" onclick="toggleShop()">
       🛍️ Cheap Designer Clothes for Sale
       <span class="arrow">▼</span>
@@ -191,6 +163,7 @@
       <a class="sub-link" href="https://depop.app.link/D2uzMI9i32b" target="_blank" rel="noopener">🛒 Depop</a>
       <a class="sub-link" href="https://www.vinted.co.uk/member/311777409-sstoryclothing" target="_blank" rel="noopener">👗 Vinted</a>
     </div>
+
   </div>
 
   <div class="divider"></div>
@@ -234,11 +207,13 @@
   function openModal() { document.getElementById('modalOverlay').classList.add('active'); }
   function closeModal() { document.getElementById('modalOverlay').classList.remove('active'); }
   function closeModalOutside(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
+  function toggleReselling() {
+    document.getElementById('resellingBtn').classList.toggle('open');
+    document.getElementById('resellingLinks').classList.toggle('visible');
+  }
   function toggleShop() {
-    const btn = document.getElementById('shopBtn');
-    const links = document.getElementById('shopLinks');
-    btn.classList.toggle('open');
-    links.classList.toggle('visible');
+    document.getElementById('shopBtn').classList.toggle('open');
+    document.getElementById('shopLinks').classList.toggle('visible');
   }
 </script>
 
