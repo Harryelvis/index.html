@@ -42,7 +42,7 @@
 
   .container { 
     width: 100%; 
-    max-width: 440px; 
+    max-width: 420px; 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -50,7 +50,7 @@
 
   .header { 
     text-align: center; 
-    margin-bottom: 28px; 
+    margin-bottom: 24px; 
     animation: fadeDown 0.7s ease both; 
   }
 
@@ -79,25 +79,27 @@
     margin: 0 auto; 
   }
 
-  /* Hero Newsletter CTA */
+  /* Compact Hero Card */
   .hero-card {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     background: linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(26,26,26,0.9) 100%);
     border: 1px solid var(--gold);
-    border-radius: 8px;
-    padding: 20px 24px;
+    border-radius: 6px;
+    padding: 14px 20px;
     text-align: center;
     transition: all 0.25s ease;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     animation: fadeUp 0.6s ease both;
   }
 
   .hero-card:hover {
     transform: translateY(-2px);
     border-color: var(--gold-light);
-    box-shadow: 0 12px 36px rgba(201,168,76,0.18);
+    box-shadow: 0 8px 24px rgba(201,168,76,0.2);
   }
 
   .hero-tag {
@@ -110,47 +112,53 @@
     background: var(--gold);
     padding: 3px 8px;
     border-radius: 3px;
-    margin-bottom: 8px;
-  }
-
-  .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--cream);
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .hero-subtitle {
-    font-size: 12.5px;
-    color: #a8a29a;
+    font-size: 13px;
+    color: var(--cream);
     font-weight: 400;
+    line-height: 1.4;
   }
 
   .divider { 
     width: 100%; 
     height: 1px; 
     background: linear-gradient(to right, transparent, var(--gold), transparent); 
-    margin: 32px 0 24px; 
+    margin: 28px 0 22px; 
     opacity: 0.3; 
   }
 
-  /* Horizontal Social Row */
+  /* Social Area with Animated Gold Label */
   .social-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
 
   .social-label {
     font-family: 'Playfair Display', serif;
     font-size: 12px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #7a756f;
+    font-weight: 700;
+    color: var(--gold);
+    display: inline-block;
+    animation: goldGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes goldGlow {
+    0%, 100% {
+      opacity: 0.75;
+      text-shadow: 0 0 0 rgba(201, 168, 76, 0);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 10px rgba(201, 168, 76, 0.7), 0 0 20px rgba(232, 200, 122, 0.4);
+    }
   }
 
   .social-row {
@@ -161,8 +169,8 @@
   }
 
   .social-icon-btn {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     background: var(--dark2);
     border: 1px solid rgba(201,168,76,0.25);
@@ -175,8 +183,8 @@
   }
 
   .social-icon-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     fill: currentColor;
     transition: transform 0.2s ease;
   }
@@ -186,11 +194,11 @@
     background: var(--dark3);
     color: var(--gold);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
   }
 
   .social-icon-btn:hover svg {
-    transform: scale(1.08);
+    transform: scale(1.1);
   }
 
   @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -209,8 +217,7 @@
 
   <a class="hero-card" href="https://harryelvis.substack.com" target="_blank" rel="noopener">
     <span class="hero-tag">Free Newsletter</span>
-    <div class="hero-title">Get Financial Breakdown Weekly</div>
-    <div class="hero-subtitle">Simple, direct insights on wealth & investing before 25.</div>
+    <div class="hero-subtitle">Simple, direct insights on wealth & investing.</div>
   </a>
 
   <div class="divider"></div>
@@ -227,4 +234,12 @@
       </a>
 
       <a class="social-icon-btn" href="https://www.tiktok.com/@harry_elvis?_r=1&_t=ZN-96GplQz24DD" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72
+        <svg viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
